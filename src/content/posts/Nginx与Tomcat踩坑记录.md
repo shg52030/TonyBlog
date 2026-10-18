@@ -8,7 +8,7 @@ tags:
   - Nginx
   - Tomcat
   - 运维
-description: "413、504、真实 IP 没了、静态资源 404。这几个我几乎每个项目都要碰一次。"
+description: "413、504、真实 IP 没了、静态资源 404。"
 
 
 ---

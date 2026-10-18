@@ -8,7 +8,7 @@ tags:
   - Vue
   - Spring Boot
   - 前后端
-description: "跨域、Long 丢精度、日期差一天、下载乱码、数组传不过去。这几个我解释过太多遍了。"
+description: "跨域、Long 丢精度、下载乱码、数组传不过去。"
 ---
 
 

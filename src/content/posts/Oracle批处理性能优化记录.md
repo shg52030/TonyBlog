@@ -1,14 +1,14 @@
 ---
 author: "Tony"
 pubDatetime: 2025-11-02T01:12:00+08:00
-title: "批处理又变慢了"
+title: "跑批调度变慢了"
 featured: true
 draft: false
 tags:
   - Oracle
   - 性能优化
   - 运维
-description: "第一年二十分钟，第三年一小时。客户开始打电话问几点能出数。"
+description: ""
 ---
 
 银行绩效系统的月度计算是个典型批处理：把一个月里各机构、各条线、各人员的业绩数据抽出来，按考核方案逐项算分，算完做二次分配，最后落表。
@@ -49,11 +49,11 @@ select * from table(dbms_xplan.display_cursor('&sql_id', null, 'ALLSTATS LAST'))
 
 ## 后来查出来就这几种
 
-最常见的是索引列被函数包住了。条件写成 `where to_char(stat_date,'yyyymm')='202609'`，`stat_date` 上的索引直接失效，走全表。改成范围查询就好了：
+最常见的是索引列被函数包住了。条件写成 `where to_char(stat_date,'yyyymm')='202509'`，`stat_date` 上的索引直接失效，走全表。改成范围查询就好了：
 
 ```sql
-where stat_date >= date '2026-09-01'
-  and stat_date <  date '2026-10-01'
+where stat_date >= date '2025-09-01'
+  and stat_date <  date '2025-10-01'
 ```
 
 这类问题的特点是，单看 SQL 都对，但它让你的索引白建了。
