@@ -57,6 +57,8 @@ export default {
     categoriesDesc: "按主题浏览全部文章。",
     categoriesEmpty: "还没有任何分类。",
     categoryPostCount: "共 {{count}} 篇文章",
+    categoryNoPosts: "暂无文章",
+    categoryEmpty: "这个分类还没有文章，写一篇就会出现在这里。",
 
     postsTitle: "文章",
     postsDesc: "我发布的所有文章。",

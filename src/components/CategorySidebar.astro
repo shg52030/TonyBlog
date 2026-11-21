@@ -65,20 +65,22 @@ const t = useTranslations(locale);
             <a
               href={getRelativeLocaleUrl(locale, `categories/${category}/`)}
               aria-current={current === category ? "page" : undefined}
+              title={count === 0 ? t.pages.categoryNoPosts : categoryName}
               class:list={[
                 "hover:text-accent -mx-2 flex items-baseline justify-between gap-2 rounded-sm px-2 py-1.5 transition-colors",
                 {
                   "text-accent bg-accent/10 font-semibold":
                     current === category,
+                  "text-muted-foreground": count === 0 && current !== category,
                 },
               ]}
             >
-              <span class="truncate" title={categoryName}>
-                {categoryName}
-              </span>
-              <span class="text-muted-foreground shrink-0 text-[0.8125rem] tabular-nums">
-                {count}
-              </span>
+              <span class="truncate">{categoryName}</span>
+              {count > 0 && (
+                <span class="text-muted-foreground shrink-0 text-[0.8125rem] tabular-nums">
+                  {count}
+                </span>
+              )}
             </a>
           </li>
         ))

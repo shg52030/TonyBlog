@@ -52,6 +52,8 @@ export default {
     categoriesDesc: "Browse all posts by topic.",
     categoriesEmpty: "No categories yet.",
     categoryPostCount: "{{count}} posts in total",
+    categoryNoPosts: "No posts yet",
+    categoryEmpty: "No posts in this category yet.",
 
     postsTitle: "Posts",
     postsDesc: "All the articles I've posted.",

@@ -29,15 +29,22 @@ const formatCount = (count: number) =>
     {
       categories.length > 0 ? (
         <ul class="divide-border border-border divide-y border-y">
-          {categories.map(({ category, categoryName, count }) => (
+          {categories.map(({ category, categoryName, count, description }) => (
             <li>
               <a
                 href={getRelativeLocaleUrl(locale, `categories/${category}/`)}
                 class="group hover:text-accent flex items-center justify-between gap-4 py-3.5 transition-colors"
               >
-                <span class="font-medium">{categoryName}</span>
-                <span class="text-muted-foreground group-hover:text-accent text-sm tabular-nums">
-                  {formatCount(count)}
+                <span class="min-w-0">
+                  <span class="block font-medium">{categoryName}</span>
+                  {description && (
+                    <span class="text-muted-foreground mt-0.5 block text-sm">
+                      {description}
+                    </span>
+                  )}
+                </span>
+                <span class="text-muted-foreground group-hover:text-accent shrink-0 text-sm tabular-nums">
+                  {count > 0 ? formatCount(count) : t.pages.categoryNoPosts}
                 </span>
               </a>
             </li>

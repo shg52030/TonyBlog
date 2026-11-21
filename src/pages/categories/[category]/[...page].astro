@@ -27,6 +27,15 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
       posts.filter(post => getCategorySlug(getCategoryName(post)) === category)
     );
 
+    // `paginate()` returns no route for an empty array, so categories that are
+    // declared in src/data/categories.ts but have no posts yet get a single
+    // placeholder route instead — otherwise their sidebar link would 404.
+    if (categoryPosts.length === 0) {
+      return [
+        { params: { category }, props: { categoryName, categoryCount: 0 } },
+      ];
+    }
+
     return paginate(categoryPosts, {
       params: { category },
       props: { categoryName, categoryCount: count },
@@ -36,13 +45,17 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 }
 
 type Props = {
-  page: Page<CollectionEntry<"posts">>;
+  /** Missing for categories that have no posts yet */
+  page?: Page<CollectionEntry<"posts">>;
   categoryName: string;
   categoryCount: number;
 };
 
 const { page, categoryName, categoryCount } = Astro.props;
 const { category } = Astro.params;
+
+const posts = page?.data ?? [];
+const lastPage = page?.lastPage ?? 1;
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
@@ -74,15 +87,23 @@ const countLabel = t.pages.categoryPostCount.replace(
         </p>
 
         <ul>
-          {page.data.map(data => <Card {...data} />)}
+          {posts.map(data => <Card {...data} />)}
         </ul>
 
-        <Pagination {page} />
+        {
+          posts.length === 0 && (
+            <p class="text-muted-foreground border-border my-6 border-y py-10 text-center">
+              {t.pages.categoryEmpty}
+            </p>
+          )
+        }
+
+        {page && <Pagination {page} />}
       </div>
 
       <CategorySidebar current={category} />
     </div>
   </main>
 
-  <Footer wide noMarginTop={page.lastPage > 1} />
+  <Footer wide noMarginTop={lastPage > 1} />
 </Layout>

@@ -4,7 +4,7 @@ pubDatetime: 2025-06-18T13:47:00+08:00
 title: "上线后关于Nginx 的事"
 featured: false
 draft: false
-category: "运维"
+category: "运维部署"
 tags:
   - Nginx
   - Tomcat

@@ -50,6 +50,8 @@ export interface UIStrings {
     categoriesDesc: string;
     categoriesEmpty: string;
     categoryPostCount: string;
+    categoryNoPosts: string;
+    categoryEmpty: string;
 
     postsTitle: string;
     postsDesc: string;
