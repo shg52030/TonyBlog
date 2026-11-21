@@ -1,0 +1,36 @@
+/* ===================================================================
+   思源黑体（Noto Sans SC）自托管子集
+   -------------------------------------------------------------------
+   只包含本站正文/标题实际用到的字符，单字重约 100KB，
+   不依赖 Google Fonts（国内经常连不上），也不会有 FOIT。
+
+   新增文章后如果出现「个别字变成系统字体」的情况，运行：
+     npm run font:build
+   脚本会重新扫描 src 下的所有字符并生成新的子集。
+
+   字形缺失时按 sans-serif 回退到苹方 / 微软雅黑，不会出现方块。
+   =================================================================== */
+
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/noto-sans-sc-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/noto-sans-sc-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/noto-sans-sc-700.woff2") format("woff2");
+}

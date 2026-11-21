@@ -34,8 +34,10 @@ const homePath = getRelativeLocaleUrl(locale, "");
     class="app-layout my-1"
   >
     <section id="hero" class="border-border border-b pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-       Hello，我是 Tony
+      <h1
+        class="my-4 inline-block text-4xl font-light tracking-tight sm:my-8 sm:text-5xl"
+      >
+        Hello，我是 Tony
       </h1>
       <!--  <a
         target="_blank"
@@ -55,7 +57,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
       <p>
         一名开发运维。这里是我的赛博自留地，攒一些技术笔记、项目踩坑和工具折腾，偶尔夹带点读书和生活感想。不一定高产，但不会荒着。
       </p>
-     <!-- <p class="mt-2">
+      <!-- <p class="mt-2">
         Read the blog posts or check{" "}
         <LinkButton
           class="hover:text-accent underline decoration-dashed underline-offset-4"
@@ -65,7 +67,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
         </LinkButton>{" "}
         for more info.
       </p> -->
-       <!-- {
+      <!-- {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
             <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
@@ -86,7 +88,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
             { "border-border border-b": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">
+          <h2 class="text-[1.125rem] font-normal tracking-tight">
             {t.home.featured}
           </h2>
           <ul>
@@ -101,7 +103,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">
+          <h2 class="text-[1.125rem] font-normal tracking-tight">
             {t.home.recentPosts}
           </h2>
           <ul>

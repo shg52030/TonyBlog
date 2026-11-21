@@ -26,6 +26,9 @@ pnpm-debug.log*
 # pagefind
 public/pagefind
 
+# 字体源文件缓存（npm run font:build 会自动下载）
+.cache/
+
 # pnpm
 .pnpm-store
 

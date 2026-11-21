@@ -11,6 +11,8 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
+    "font:build": "python scripts/build-fonts.py",
+    "font:check": "node scripts/check-fonts.mjs",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint ."
