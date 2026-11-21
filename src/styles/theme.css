@@ -29,13 +29,13 @@
   --border: #e3e3e6;
 }
 
-/* Dark theme values — 同族蓝：与浅色主题同一支蓝色，提亮以适配深底 */
+/* Dark theme values — 橙色强调：与深蓝灰底形成暖冷对比 */
 [data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
-  --accent: #4d9fff;
-  --accent-foreground: #0b1220;
+  --accent: #ff6b01;
+  --accent-foreground: #ffffff;
   --muted: #343f60;
   --muted-foreground: #afb9ca;
-  --border: #3a4661;
+  --border: #ab4b08;
 }
