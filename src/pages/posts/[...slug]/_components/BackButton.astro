@@ -7,11 +7,23 @@ import config from "@/config";
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
+
+type Props = {
+  /** Use the wider shell on pages that carry the category sidebar. */
+  wide?: boolean;
+};
+
+const { wide = false } = Astro.props;
 ---
 
 {
   config.features.showBackButton && (
-    <div class="app-layout flex items-center justify-start">
+    <div
+      class:list={[
+        "mx-auto flex w-full items-center justify-start px-4",
+        wide ? "max-w-wide" : "max-w-app",
+      ]}
+    >
       <LinkButton
         id="back-button"
         href={getRelativeLocaleUrl(locale, "")}

@@ -5,16 +5,28 @@ import { useTranslations } from "@/i18n";
 
 type Props = {
   noMarginTop?: boolean;
+  /** Use the wider shell on pages that carry the category sidebar. */
+  wide?: boolean;
 } & HTMLAttributes<"footer">;
 
-const { noMarginTop = false, class: className, ...attrs } = Astro.props;
+const {
+  noMarginTop = false,
+  wide = false,
+  class: className,
+  ...attrs
+} = Astro.props;
 
 const t = useTranslations(Astro.currentLocale);
 const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
+  class:list={[
+    "mx-auto w-full px-4",
+    wide ? "max-w-wide" : "max-w-app",
+    { "mt-auto": !noMarginTop },
+    className,
+  ]}
   {...attrs}
 >
   <div

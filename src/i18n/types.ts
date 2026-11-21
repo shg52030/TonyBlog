@@ -3,6 +3,7 @@ export interface UIStrings {
     home: string;
     posts: string;
     tags: string;
+    categories: string;
     about: string;
     archives: string;
     search: string;
@@ -14,6 +15,7 @@ export interface UIStrings {
     sharePostOn: string;
     sharePostViaEmail: string;
     tagLabel: string;
+    categoryLabel: string;
     backToTop: string;
     goBack: string;
     editPage: string;
@@ -41,6 +43,13 @@ export interface UIStrings {
 
     tagsTitle: string;
     tagsDesc: string;
+
+    categoryTitle: string;
+    categoryDesc: string;
+    categoriesTitle: string;
+    categoriesDesc: string;
+    categoriesEmpty: string;
+    categoryPostCount: string;
 
     postsTitle: string;
     postsDesc: string;

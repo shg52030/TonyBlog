@@ -4,6 +4,7 @@ pubDatetime: 2024-11-07T21:58:00+08:00
 title: "Vue 和 Spring Boot 联调遇到的问题"
 featured: false
 draft: false
+category: "前后端开发"
 tags:
   - Vue
   - Spring Boot

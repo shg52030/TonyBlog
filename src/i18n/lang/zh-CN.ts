@@ -5,7 +5,8 @@ export default {
     home: "首页",
     posts: "文章",
     tags: "标签",
-    about: "关于",
+    categories: "分类",
+    about: "关于我",
     archives: "归档",
     search: "搜索",
   },
@@ -17,6 +18,7 @@ export default {
     sharePostOn: "分享到 {{platform}}",
     sharePostViaEmail: "通过邮件分享这篇文章",
     tagLabel: "标签",
+    categoryLabel: "分类",
     backToTop: "返回顶部",
     goBack: "返回",
     editPage: "编辑页面",
@@ -48,6 +50,13 @@ export default {
 
     tagsTitle: "文章标签",
     tagsDesc: "文章中使用的所有标签。",
+
+    categoryTitle: "分类",
+    categoryDesc: "该分类下的全部文章。",
+    categoriesTitle: "文章分类",
+    categoriesDesc: "按主题浏览全部文章。",
+    categoriesEmpty: "还没有任何分类。",
+    categoryPostCount: "共 {{count}} 篇文章",
 
     postsTitle: "文章",
     postsDesc: "我发布的所有文章。",

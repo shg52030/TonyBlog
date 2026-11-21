@@ -26,6 +26,12 @@
   @apply max-w-3xl;
 }
 
+/* Wider shell used on pages that carry the category sidebar.
+   64rem = 48rem content + 13rem sidebar + 3rem gap. */
+@utility max-w-wide {
+  @apply max-w-[64rem];
+}
+
 @utility app-layout {
   @apply max-w-app mx-auto w-full px-4;
 }

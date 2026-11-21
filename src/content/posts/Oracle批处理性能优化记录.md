@@ -4,6 +4,7 @@ pubDatetime: 2025-11-02T01:12:00+08:00
 title: "跑批调度变慢了"
 featured: true
 draft: false
+category: "性能优化"
 tags:
   - Oracle
   - 性能优化

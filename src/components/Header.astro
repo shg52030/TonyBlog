@@ -32,6 +32,13 @@ const isActive = (path: string) => {
   const pathArray = path.split("/").filter(p => p.trim());
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
+
+type Props = {
+  /** Use the wider shell on pages that carry the category sidebar. */
+  wide?: boolean;
+};
+
+const { wide = false } = Astro.props;
 ---
 
 <a
@@ -43,7 +50,10 @@ const isActive = (path: string) => {
 </a>
 
 <header
-  class="app-layout flex flex-col items-center justify-between sm:flex-row"
+  class:list={[
+    "mx-auto flex w-full flex-col items-center justify-between px-4 sm:flex-row",
+    wide ? "max-w-wide" : "max-w-app",
+  ]}
 >
   <div
     class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"
@@ -80,6 +90,14 @@ const isActive = (path: string) => {
             class:list={{ "active-nav": isActive("/posts") }}
           >
             {t.nav.posts}
+          </a>
+        </li>
+        <li class="col-span-2">
+          <a
+            href={getRelativeLocaleUrl(locale, "categories/")}
+            class:list={{ "active-nav": isActive("/categories") }}
+          >
+            {t.nav.categories}
           </a>
         </li>
         <li class="col-span-2">

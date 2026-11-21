@@ -4,6 +4,7 @@ pubDatetime: 2026-07-27T22:05:00+08:00
 title: "做数字人直播"
 featured: false
 draft: false
+category: "项目实战"
 tags:
   - AI
   - 项目实施

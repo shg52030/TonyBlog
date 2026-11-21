@@ -5,6 +5,7 @@ export default {
     home: "Home",
     posts: "Posts",
     tags: "Tags",
+    categories: "Categories",
     about: "About",
     archives: "Archives",
     search: "Search",
@@ -16,6 +17,7 @@ export default {
     sharePostOn: "Share this post on {{platform}}",
     sharePostViaEmail: "Share this post via email",
     tagLabel: "Tags",
+    categoryLabel: "Category",
     backToTop: "Back to top",
     goBack: "Go back",
     editPage: "Edit page",
@@ -43,6 +45,13 @@ export default {
 
     tagsTitle: "Tags",
     tagsDesc: "All the tags used in posts.",
+
+    categoryTitle: "Category",
+    categoryDesc: "All the articles in this category.",
+    categoriesTitle: "Categories",
+    categoriesDesc: "Browse all posts by topic.",
+    categoriesEmpty: "No categories yet.",
+    categoryPostCount: "{{count}} posts in total",
 
     postsTitle: "Posts",
     postsDesc: "All the articles I've posted.",

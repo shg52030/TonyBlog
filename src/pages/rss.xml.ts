@@ -17,6 +17,7 @@ export async function GET() {
       title: data.title,
       description: data.description,
       pubDate: new Date(data.modDatetime ?? data.pubDatetime),
+      ...(data.category && { categories: [data.category] }),
     })),
   });
 }
