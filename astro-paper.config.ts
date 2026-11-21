@@ -2,9 +2,9 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
+    url: "https://tonyblog-ex7.pages.dev/",
     title: "Tony的个人博客",
-    description: "技术、AI和个人成长记录",
+    description: "Tony的个人博客，记录软件开发、系统运维、AI探索以及个人成长",
     author: "Tony",
     profile: "https://satna.ing",
     ogImage: "default-og.jpg",
